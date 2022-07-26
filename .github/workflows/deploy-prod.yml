@@ -1,8 +1,10 @@
 name: Production deployment
-on:
+
+on: 
   push:
     branches:
       - main
+
 env:
   DOCKER_IMAGE_NAME: shovan777-azure-ttt # Must not exist as a package associated with a different repo!
   IMAGE_REGISTRY_URL: docker.pkg.github.com
@@ -13,6 +15,7 @@ env:
   ### REPLACE USERNAME WITH GH USERNAME         ###
   AZURE_WEBAPP_NAME: shovan777-ttt-app
   #################################################
+
 jobs:
   build:
     runs-on: ubuntu-latest
